@@ -1,0 +1,46 @@
+<div class="container">
+  <table class="table">
+    <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Book Name</th>
+      <th scope="col">Book Author</th>
+      <th scope="col">Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let book of bookList">
+      <th scope="row">{{book.id}}</th>
+      <td>{{book.name}}</td>
+      <td>{{book.author}}</td>
+      <td>
+        <span type="button" class="badge bg-dark mx-2">Edit</span>
+        <span type="button" class="badge bg-dark"
+              data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="current=book.id"
+        >Delete</span>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+  <app-toast
+    message="{{this.message}}"></app-toast>
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Delete Book</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Are you Sure, You want to Delete this Book!
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+          <a type="button" class="btn btn-primary" (click)="deleteById()" data-bs-dismiss="modal">Yes</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
