@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="card mb-3 p-3">
+        
+    
+        <h3>{{listing?.name}}</h3>
+        <p>{{listing?.description}}</p>
+        <p>$ {{listing?.price}}</p>
+
+        <div class="card-footer">
+            <a routerLink="/listings" type="button" 
+                class="btn btn-dark mx-3"> Back </a>
+                
+            <a routerLink="/contact/{{listing?.id}}" type="button" 
+                class="btn btn-dark mx-3"> Contact me </a> 
+        </div>
+    
+           
+    </div>
+</div>
