@@ -4,12 +4,12 @@
     <form (ngSubmit)="onSubmit()">
         <div class="form-group mb-3">
             <label class="form-label" for="name">Name</label>
-            <input type="text" class="form-control" name="name" id="name" 
+            <input type="text" class="form-control" name="name" id="name"
             [(ngModel)]="name" placeholder="Enter Name here">
         </div>
         <div class="form-group mb-3">
             <label class="form-label" for="description">Description</label>
-            <input type="text" class="form-control" name="description" id="description" 
+            <input type="text" class="form-control" name="description" id="description"
             [(ngModel)]="description" placeholder="Enter description here">
         </div>
         <div class="form-group mb-3">
@@ -23,5 +23,5 @@
 <app-listing-data-form
     buttonText="Create"
     pageTitle="Create New Listing"
-    (onSubmit)="onSubmit()"
+    (onSubmit)="onSubmit($event)"
 ></app-listing-data-form>
