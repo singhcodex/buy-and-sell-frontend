@@ -1,1 +1,8 @@
-<p>edit-listing-page works!</p>
+<app-listing-data-form 
+    buttonText="Save Changes"
+    pageTitle="Edit List"
+    currentName="{{listing?.name}}"
+    currentDescription="{{listing?.description}}"
+    currentPrice="{{listing?.price}}"
+    (onSubmit)="onSubmit()"
+    ></app-listing-data-form>
